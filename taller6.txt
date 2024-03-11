@@ -1,0 +1,77 @@
+reto 6
+1.
+import math
+def volumen(r1:float,r2:float,h:float,pi:float) -> float:
+  return (4/3*pi*r1**3)+(1/3*pi*r2**2*h)
+def area(r1:float,r2:float,h:float,pi:float) -> float:
+  return (4*pi*r1**2)+(pi*r2**2)+pi*r2*(r2**2+h**2)**(1/2)
+if __name__ == "__main__":
+    r1=float(input("Radio esfera? "))
+    r2=float(input("Radio cono? "))
+    h=float(input("Altura cono? "))
+    pi=float(math.pi)
+    volumen_total = volumen(r1,r2,h,pi)
+    print("El volúmen total es "+str(volumen_total))
+if __name__ == "__main__":
+    area_total = area(r1,r2,h,pi)
+    print("El área superficial total es "+str(area_total))
+2.
+import math
+def perimetro(a:float,b:float,r:float,pi:float) -> float:
+  return (2*a+2*b)+2*(2*pi*r)
+def area(a:float,b:float,r:float,pi:float) -> float:
+  return (a*b)+2*(pi*r**2)
+if __name__ == "__main__":
+    a=float(input("Alto del rectángulo? "))
+    b=float(input("Ancho del rectángulo? "))
+    r=float(input("Radio de los círculos? "))
+    pi=float(math.pi)
+    perimetro_total = perimetro(a,b,r,pi)
+    print("El perímetro total es "+str(perimetro_total))
+if __name__ == "__main__":
+    area_total = area(a,b,r,pi)
+    print("El área total es "+str(area_total))
+3.
+def masa(n:float,m:float,k:float) -> float:
+  return n*6+m*7+k*1
+if __name__ == "__main__":
+    n=float(input("Cantidad de gallinas? "))
+    m=float(input("Cantidad de gallos? "))
+    k=float(input("Cantidad de pollitos? "))
+    masa_total = masa(n,m,k)
+    print("La masa total es "+str(masa_total)+" kilogramos")
+
+4.
+def valor(p:float,m:float,h:float,b:float) -> float:
+  return b-(p*300+m*3300+h*350)
+if __name__ == "__main__":
+    p=float(input("Cantidad de panes? "))
+    m=float(input("Cantidad de bolsas de leche? "))
+    h=float(input("Cantidad de huevos? "))
+    b=float(input("Valor del billete? "))
+    vueltas = valor(p,m,h,b)
+    if float(vueltas)>0:
+        print("Te sobran "+str(vueltas)+" pesos")
+    elif float(vueltas)==0:
+        print("Llevas es dinero exacto")
+    else:
+        print("Quedas debiendo "+str(vueltas)+" pesos")
+5.
+def valor(c:float,i:float,n:float) -> float:
+  return (c*i/1200*n)+c
+if __name__ == "__main__":
+    c=float(input("Valor del préstamo? "))
+    i=float(input("Interés? "))
+    n=float(input("Meses? "))
+    total = valor(c,i,n)
+    print("El costo total es de "+str(total)+" pesos")
+6.
+def contagiados(c:float,d:float) -> float:
+  return c*2**d
+if __name__ == "__main__":
+    c=float(input("Contagiados iniciales? "))
+    d=float(input("Dias transcurridos? "))
+    total_contagiados = contagiados(c,d)
+    print("Los contagiados totales después de "+str(d)+" días es de "+str(total_contagiados))
+
+    
